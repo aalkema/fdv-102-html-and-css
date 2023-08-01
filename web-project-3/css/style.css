@@ -1,0 +1,77 @@
+@font-face { /* this is the font required by the D2L style guide */
+    font-family: "Stanley Regular";
+    src: url("https://db.onlinewebfonts.com/t/ec37460cccca80655156b339f1cdbbcb.eot");
+    src: url("https://db.onlinewebfonts.com/t/ec37460cccca80655156b339f1cdbbcb.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/ec37460cccca80655156b339f1cdbbcb.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/ec37460cccca80655156b339f1cdbbcb.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/ec37460cccca80655156b339f1cdbbcb.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/ec37460cccca80655156b339f1cdbbcb.svg#Stanley Regular")format("svg");
+}
+
+body {
+    font: 100%/1.5 'Stanley Regular', serif;
+    font-variant-ligatures: common-ligatures;
+    margin: 0 auto; 
+    padding: 2em; 
+    max-width: 80rem;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-gap: 1em;
+    grid:
+        'header'
+        'image'
+        'main'
+}
+
+header {
+    grid-area: header;
+}
+
+figure {
+    grid-area: image;
+    display: block;
+    margin: 0 auto;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: main;
+    margin: 0 auto; 
+}
+
+address {
+    display: block;
+    font-style:normal;
+}
+
+@media (min-width: 60em) {
+    body {
+        grid:   
+            'header header' auto
+            'image main' auto
+            /0.6fr 1fr;
+        grid-gap: 10px;
+    }
+}
+
+picture {
+    max-width: 100%;
+    max-height: auto;
+}
+
+.top {
+    background-image:   
+        url("../img/D2Linverted.png"),
+        url("../img/black.jpeg");
+    background-repeat:no-repeat;
+    background-size:
+        contain,
+        cover;
+    background-position: 
+        top center,
+        left center;
+    height: 10vh;
+}
