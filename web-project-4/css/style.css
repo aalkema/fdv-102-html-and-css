@@ -1,0 +1,34 @@
+.container {
+    height: 0;
+    padding-top: 100%;
+    position: relative;
+}
+
+.blacksmith {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes hideshow {
+    0% { opacity: 0; }
+    49% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.bolt {
+    animation: hideshow 3s infinite;
+}
+
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    85% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.hammer {
+    animation: swing 3s infinite;
+}
