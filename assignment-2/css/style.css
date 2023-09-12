@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Spectral';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap; 
+        src:
+            url('spectral-regular.woff2') format('woff2'),
+            url('spectral-regular.woff') format('woff'),
+            url('spectral-regular.ttf') format('truetype');
+}
+
+body {
+    font: 100%/1.5 'Spectral', serif;
+    font-variant-ligatures: common-ligatures;
+    background-image: url('../img/background_texture.png');
+    background-repeat: repeat;
+    margin: 0 auto; 
+    padding: 2em;
+    max-width: 70rem;
+    display: grid;
+    grid-gap: 1em;
+    grid:
+        'banner'
+        'nav'
+        'main'
+        'footer'
+}
+
+@media (min-width: 40em) {
+    body {
+        grid:   
+            'banner banner' auto
+            'nav main' 1fr
+            'nav main' 1fr
+            'footer footer' auto
+            /0.4fr 1fr;
+        grid-gap: 15px;
+    }
+
+    nav {
+        border-right: 1px solid #ccc;
+    }
+}
+
+header {
+    grid-area: banner;
+}
+
+nav {
+    grid-area: nav;
+}
+
+article {
+    grid-area: main;
+    background-image: url('../img/background-watermark.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    
+}
+
+section {
+    grid-area: quote;
+}
+
+footer {
+    grid-area: footer;
+    font-size: 0.8rem;
+}
+
+p.quote {
+    font-style: italic;
+}
+
+h1.title {
+    color: brown;
+    margin-bottom: 0;
+    line-height: 1; 
+}
+
+.logo {
+    background-image:   
+        url("../img/title.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: 20vh;
+}
+
+h1 + p {
+    font-style: italic;
+}
+
+h3 {
+    margin-bottom: 0;
+    line-height: 1.1; 
+}
+
+.pages {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 4;
+}
+
+ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li a {
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+background-color: #ccc;
+}
+
+.races {
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
